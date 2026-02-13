@@ -1,0 +1,38 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "pl-brand-starter",
+	"main": ".open-next/worker.js",
+	"compatibility_date": "2025-03-01",
+	"compatibility_flags": [
+		"nodejs_compat",
+		"global_fetch_strictly_public"
+	],
+	"assets": {
+		"binding": "ASSETS",
+		"directory": ".open-next/assets"
+	},
+	"observability": {
+		"enabled": true
+	},
+	"tail_consumers": [
+    {
+      "service": "tail-worker"
+    }
+  ],
+  "env": {
+		"beta": {
+			"NEXT_PUBLIC_PL_ENVIRONMENT": "",
+			"NEXT_PUBLIC_APP_URL": "",
+			"NEXT_PUBLIC_PL_PUBLISHER_ID": "",
+			"NEXT_PUBLIC_PL_PUBLISHER_API_KEY": "",
+			"NEXT_PUBLIC_PL_PUBLISHER_API_SECRET": ""
+		},
+		"prod": {
+			"NEXT_PUBLIC_PL_ENVIRONMENT": "",
+			"NEXT_PUBLIC_APP_URL": "",
+			"NEXT_PUBLIC_PL_PUBLISHER_ID": "",
+			"NEXT_PUBLIC_PL_PUBLISHER_API_KEY": "",
+			"NEXT_PUBLIC_PL_PUBLISHER_API_SECRET": ""
+		}
+  }
+}
