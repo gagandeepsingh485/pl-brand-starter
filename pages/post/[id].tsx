@@ -6,11 +6,26 @@ import { Post, Publisher } from "publive-cms-sdk";
 import React from "react";
 import { FooterData, HomePageData, NavbarData } from "@/lib/data/page";
 
+// Draft / Preview Route for a single post
 export const getServerSideProps = async (context: GetServerSidePropsContext) => {
+  const id = context.params?.id as string;
+  if (!id || isNaN(parseInt(id))) {
+    return {
+      notFound: true
+    }
+  }
+
   const publive = new APIService().getSDK();
   const publisher = await publive.auth.fetchPublisher();
 
-  // const post = await publive.content.fetch("/home-page");
+  const identifiedPost = await publive.content.identify(`/post/${id}`);
+
+  if (!identifiedPost.data || !identifiedPost.data.content) {
+    return {
+      notFound: true,
+    };
+  }
+
   const post = HomePageData;
   
   // const navbar = await publive.utils.layout.fetchNavbar();
