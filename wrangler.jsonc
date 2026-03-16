@@ -21,18 +21,24 @@
   ],
   "env": {
 		"beta": {
-			"NEXT_PUBLIC_PL_ENVIRONMENT": "",
-			"NEXT_PUBLIC_APP_URL": "",
-			"NEXT_PUBLIC_PL_PUBLISHER_ID": "",
-			"NEXT_PUBLIC_PL_PUBLISHER_API_KEY": "",
-			"NEXT_PUBLIC_PL_PUBLISHER_API_SECRET": ""
+			"name": "pl-brand-starter",
+			"vars": {
+				"NEXT_PUBLIC_PL_ENVIRONMENT": "",
+				"NEXT_PUBLIC_APP_URL": "",
+				"NEXT_PUBLIC_PL_PUBLISHER_ID": "",
+				"NEXT_PUBLIC_PL_PUBLISHER_API_KEY": "",
+				"NEXT_PUBLIC_PL_PUBLISHER_API_SECRET": ""
+			}
 		},
 		"prod": {
-			"NEXT_PUBLIC_PL_ENVIRONMENT": "",
-			"NEXT_PUBLIC_APP_URL": "",
-			"NEXT_PUBLIC_PL_PUBLISHER_ID": "",
-			"NEXT_PUBLIC_PL_PUBLISHER_API_KEY": "",
-			"NEXT_PUBLIC_PL_PUBLISHER_API_SECRET": ""
+			"name": "pl-brand-starter",
+			"vars": {
+				"NEXT_PUBLIC_PL_ENVIRONMENT": "",
+				"NEXT_PUBLIC_APP_URL": "",
+				"NEXT_PUBLIC_PL_PUBLISHER_ID": "",
+				"NEXT_PUBLIC_PL_PUBLISHER_API_KEY": "",
+				"NEXT_PUBLIC_PL_PUBLISHER_API_SECRET": ""
+			}
 		}
   }
 }
