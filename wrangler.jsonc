@@ -21,6 +21,7 @@
   ],
   "env": {
 		"beta": {
+			"name": "pl-brand-starter",
 			"vars": {
 				"NEXT_PUBLIC_PL_ENVIRONMENT": "",
 				"NEXT_PUBLIC_APP_URL": "",
@@ -30,6 +31,7 @@
 			}
 		},
 		"prod": {
+			"name": "pl-brand-starter",
 			"vars": {
 				"NEXT_PUBLIC_PL_ENVIRONMENT": "",
 				"NEXT_PUBLIC_APP_URL": "",
